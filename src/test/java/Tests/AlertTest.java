@@ -19,6 +19,7 @@ public class AlertTest extends Hooks {
         indexPage.clickSkipSignIn();
 
         RegisterPage registerPage=new RegisterPage(getDriver());
+        registerPage.clickConsent();
         registerPage.navigateToAlert();
 
         AlertPage alertPage=new AlertPage(getDriver());

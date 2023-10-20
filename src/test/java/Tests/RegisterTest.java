@@ -24,6 +24,7 @@ public class RegisterTest extends Hooks {
         List<String> checkBoxesValues= Arrays.asList("Hockey","Cricket");
 
         RegisterPage registerPage=new RegisterPage(getDriver());
+        registerPage.clickConsent();
         registerPage.registerProcess(registerObject);
 //        registerPage.registerProcess("Test","Whatever",checkBoxesValues,"secretPass","secretPass","C:\\Users\\eesslinger\\OneDrive - ENDAVA\\Desktop\\caine.jpg",
 //                "Japan","C","1916","October","7",languageValues);

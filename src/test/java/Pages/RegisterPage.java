@@ -1,6 +1,7 @@
 package Pages;
 
 import HelpMethods.ElementMethods;
+import Logger.LoggerUtility;
 import ObjectData.LoginObject;
 import ObjectData.RegisterObject;
 import org.openqa.selenium.By;
@@ -34,23 +35,33 @@ public class RegisterPage extends BasePage {
 //        Actions action = new Actions(driver);//am mutat in HelpMethods
 //        action.moveToElement(switchToElement).perform();//move to numai indica unde se duce si perform aplica actiunea
         elementMethods.moveToElement(switchToElement);
+        LoggerUtility.infoTest("The user moves the focus to Alert");
         alertsElement.click();
+        LoggerUtility.infoTest("The user clicks on Alerts");
         driver.navigate().to("https://demo.automationtesting.in/Alerts.html"); //navigheaza pana acolo si nu asteapta asa de mult ca get(), sa nu mai vedem reclamele
-
+        LoggerUtility.infoTest("The user  navigates to alert");
     }
 
     public void navigateToFrames() {
         elementMethods.moveToElement(switchToElement);
+        LoggerUtility.infoTest("The user moves the focus to Frames");
         framesElement.click();
+        LoggerUtility.infoTest("The user clicks on Frames");
         driver.navigate().to("https://demo.automationtesting.in/Frames.html");
+        LoggerUtility.infoTest("The user navigates to Frames");
     }
 
     public void navigateToWindows() {
         elementMethods.moveToElement(switchToElement);
+        LoggerUtility.infoTest("The user moves the focus to Window");
         windowsElement.click();
+        LoggerUtility.infoTest("The user clicks on Windows");
         driver.navigate().to("https://demo.automationtesting.in/Windows.html");
+        LoggerUtility.infoTest("The user navigates to Windows");
     }
 
+    @FindBy(xpath="//p[text()='Consent']")
+    private WebElement consentElement;
     @FindBy(css = "input[placeholder='First Name']")
     private WebElement firstNameElement;
     @FindBy(css = "input[placeholder='Last Name']")
@@ -81,6 +92,7 @@ public class RegisterPage extends BasePage {
     private List<WebElement> languageOptions;
 
     public void registerProcess(RegisterObject registerObject) {
+
         //(String firstName, String lastName,List<String> checkBoxesValues, String passwordRegister, String confirmPasswordRegister,
         //                                String imageUpload, String countryValue, String skillValue, String yearValue, String monthValue, String dayValue, List<String> languageValues)
         elementMethods.fillElement(firstNameElement, registerObject.getFirstName());
@@ -113,5 +125,9 @@ public class RegisterPage extends BasePage {
             }
         }
 
+    }
+    public void clickConsent(){
+        elementMethods.clickElement(consentElement);
+        LoggerUtility.infoTest("User clicks on click consent");
     }
 }

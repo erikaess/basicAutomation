@@ -1,5 +1,6 @@
 package Pages;
 
+import Logger.LoggerUtility;
 import ObjectData.LoginObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -24,10 +25,15 @@ public class LoginPage extends BasePage{
     public void loginInvalid(LoginObject loginObject)
     {
         elementMethods.fillElement(emailFieldElement,loginObject.getEmail());
+        LoggerUtility.infoTest("The user fills in emailField with value"+loginObject.getEmail());
+
         elementMethods.fillElement(passwordFieldElement,loginObject.getPassword());
+        LoggerUtility.infoTest("The user fills passwordField with value"+loginObject.getPassword());
 
         elementMethods.clickElement(enterButtonElement);
-        elementMethods.validateTextElement(errorMessageElement,loginObject.getErrorMessage());
+        LoggerUtility.infoTest("The user clicks on enterButton element");
 
+        elementMethods.validateTextElement(errorMessageElement,loginObject.getErrorMessage());
+        LoggerUtility.infoTest("The user validates errorMessageElement field to have value"+ loginObject.getErrorMessage());
     }
 }

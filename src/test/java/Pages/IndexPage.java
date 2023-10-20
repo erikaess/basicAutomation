@@ -1,5 +1,6 @@
 package Pages;
 
+import Logger.LoggerUtility;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -17,8 +18,10 @@ public class IndexPage extends BasePage{
 
     public void clickSignIn(){
         elementMethods.clickElement(signInElement);
+        LoggerUtility.infoTest("The user clicks on sign in element");
     }
     public void clickSkipSignIn(){
         elementMethods.clickElement(skipSignInElement);
+        LoggerUtility.infoTest("The user clicks on skip sign in element");
     }
 }

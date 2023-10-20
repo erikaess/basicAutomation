@@ -15,6 +15,7 @@ public class WindowTest extends Hooks {
         indexPage.clickSkipSignIn();
 
         RegisterPage registerPage=new RegisterPage(getDriver());
+        registerPage.clickConsent();
         registerPage.navigateToWindows();
 
         WindowPage windowPage=new WindowPage(getDriver());

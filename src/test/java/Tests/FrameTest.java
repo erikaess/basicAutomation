@@ -19,6 +19,7 @@ public class FrameTest extends Hooks {
         indexPage.clickSkipSignIn();
 
         RegisterPage registerPage=new RegisterPage(getDriver());
+        registerPage.clickConsent();
         registerPage.navigateToFrames();
 
         FramePage framePage=new FramePage(getDriver());

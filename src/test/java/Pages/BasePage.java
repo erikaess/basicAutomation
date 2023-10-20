@@ -6,7 +6,6 @@ import org.openqa.selenium.support.PageFactory;
 
 public class BasePage {
     public WebDriver driver;
-    //cand invatam o sa il facem protected
     public ElementMethods elementMethods;
     public AlertMethods alertMethods;
     public WindowMethods windowMethods;

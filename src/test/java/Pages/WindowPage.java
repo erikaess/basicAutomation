@@ -1,5 +1,6 @@
 package Pages;
 
+import Logger.LoggerUtility;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -31,6 +32,7 @@ public class WindowPage extends BasePage{
         windowMethods.moveFocusSpecificTab(1);
         windowMethods.closeCurrentTab();
         windowMethods.moveFocusSpecificTab(0);
+        LoggerUtility.infoTest("The user opened new tabbed options");
     }
     public void openNewSeperateWindows(){
         elementMethods.clickElement(tabOptionsList.get(1));
@@ -40,6 +42,7 @@ public class WindowPage extends BasePage{
         windowMethods.moveFocusSpecificTab(1);
         windowMethods.closeCurrentTab();
         windowMethods.moveFocusSpecificTab(0);
+        LoggerUtility.infoTest("The user opened new sepereted windows");
     }
     public void openSeperateMultipleWindows(){
         elementMethods.clickElement(tabOptionsList.get(2));
@@ -51,6 +54,7 @@ public class WindowPage extends BasePage{
         windowMethods.moveFocusSpecificTab(1);
         windowMethods.closeCurrentTab();
         windowMethods.moveFocusSpecificTab(0);
+        LoggerUtility.infoTest("The user opened multiple windows");
 
     }
 
