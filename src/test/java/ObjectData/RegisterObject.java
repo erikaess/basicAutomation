@@ -1,10 +1,11 @@
 package ObjectData;
 
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
-public class RegisterObject {
+public class RegisterObject extends CommonObject {
     private String firstName;
     private String lastName;
     private List<String> checkBoxesValues;
@@ -128,7 +129,7 @@ public class RegisterObject {
                     setLastName(testData.get(key));
                     break;
                 case "checkBoxesValues":
-                    setCheckBoxesValues(Collections.singletonList(testData.get(key)));
+                    setCheckBoxesValues(getValueAsList(testData.get(key)));
                     break;
                 case "passwordRegister":
                     setPasswordRegister(testData.get(key));
@@ -154,10 +155,11 @@ public class RegisterObject {
                     setDayValue(testData.get(key));
                     break;
                 case "languageValues":
-                    setLanguageValues(Collections.singletonList(testData.get(key)));
+                    setLanguageValues(getValueAsList(testData.get(key)));
                     break;
             }
         }
     }
+
 
 }

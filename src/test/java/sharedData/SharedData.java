@@ -14,7 +14,7 @@ public class SharedData {
 
     public void initiateDriver(){
         //initializezi driver-ele
-        driver = new EdgeDriver();
+        driver = new ChromeDriver();
         //driver = new ChromeDriver();
         //driver = new FirefoxDriver();
 

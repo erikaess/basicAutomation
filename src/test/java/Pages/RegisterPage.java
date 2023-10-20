@@ -101,7 +101,7 @@ public class RegisterPage extends BasePage {
 
         for (int index = 0; index < checkBoxes.size(); index++) {
             //checkBoxes.get(index).click();//pe fiecare faci click
-            if(registerObject.getCheckBoxesValues().contains(checkBoxes.get(index).getAttribute("value"))){
+            if(registerObject.getCheckBoxesValues().contains(checkBoxes.get(index).getText())){
                 checkBoxes.get(index).click();
             }
         }
