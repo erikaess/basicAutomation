@@ -26,12 +26,12 @@ public class AlertTest extends Hooks {
         registerPage.navigateToAlert();
         ExtentUtility.attachTestLog("pass","I navigate to alert page");
 
-//        AlertPage alertPage=new AlertPage(getDriver());
-//        alertPage.interactAlertOK();
-//        ExtentUtility.attachTestLog("pass","I interact with Alert Ok");
-//        alertPage.interactAlertCancel();
-//        ExtentUtility.attachTestLog("pass","I interact with Alert Cancel");
-//        alertPage.interactAlertText(alertObject);
-//        ExtentUtility.attachTestLog("pass","I interact with Alert Text");
+        AlertPage alertPage=new AlertPage(getDriver());
+        alertPage.interactAlertOK();
+        ExtentUtility.attachTestLog("pass","I interact with Alert Ok");
+        alertPage.interactAlertCancel();
+        ExtentUtility.attachTestLog("pass","I interact with Alert Cancel");
+        alertPage.interactAlertText(alertObject);
+        ExtentUtility.attachTestLog("pass","I interact with Alert Text");
     }
 }

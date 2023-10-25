@@ -151,6 +151,7 @@ public class RegisterObject extends CommonObject {
                     break;
                 case "monthValue":
                     setMonthValue(testData.get(key));
+                    break;
                 case "dayValue":
                     setDayValue(testData.get(key));
                     break;

@@ -25,20 +25,15 @@ public class WindowPage extends BasePage{
     public void openNewTabbedOptions(){
         elementMethods.clickElement(tabOptionsList.get(0));
         elementMethods.clickElement(tabOptionElement);
-//        tabOptionsList.get(0).click();
-//        System.out.println(driver.getTitle());
-//        tabOptionElement.click();//focusul e aici acuma
-//        System.out.println(driver.getTitle());
         windowMethods.moveFocusSpecificTab(1);
         windowMethods.closeCurrentTab();
         windowMethods.moveFocusSpecificTab(0);
         LoggerUtility.infoTest("The user opened new tabbed options");
     }
     public void openNewSeperateWindows(){
+        driver.navigate().to("https://demo.automationtesting.in/Windows.html");
         elementMethods.clickElement(tabOptionsList.get(1));
         elementMethods.clickElement(windowOptionElement);
-//        tabOptionsList.get(1).click();
-//        windowOptionElement.click();
         windowMethods.moveFocusSpecificTab(1);
         windowMethods.closeCurrentTab();
         windowMethods.moveFocusSpecificTab(0);
@@ -47,8 +42,6 @@ public class WindowPage extends BasePage{
     public void openSeperateMultipleWindows(){
         elementMethods.clickElement(tabOptionsList.get(2));
         elementMethods.clickElement(multipleOptionElement);
-//        tabOptionsList.get(2).click();
-//        multipleOptionElement.click();
         windowMethods.moveFocusSpecificTab(2);
         windowMethods.closeCurrentTab();
         windowMethods.moveFocusSpecificTab(1);

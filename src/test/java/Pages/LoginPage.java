@@ -19,7 +19,7 @@ public class LoginPage extends BasePage{
     private WebElement passwordFieldElement;
     @FindBy(id="enterbtn")
     private WebElement enterButtonElement;
-    @FindBy(id="errorm")
+    @FindBy(id="errormsg")
     private WebElement errorMessageElement;
 
     public void loginInvalid(LoginObject loginObject)

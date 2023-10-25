@@ -31,6 +31,16 @@ public class ElementMethods {
         waitVisibleElement(element);
         element.click();
     }
+
+    public void waitForce(Integer timeValue){
+        try {
+            Thread.sleep(timeValue);
+        } catch (InterruptedException e) {
+            System.out.println(e.getMessage());
+        }
+
+    }
+
     public void fillElement(WebElement element,String text){
         waitVisibleElement(element);
         element.sendKeys(text);

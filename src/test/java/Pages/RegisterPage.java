@@ -39,6 +39,7 @@ public class RegisterPage extends BasePage {
         alertsElement.click();
         LoggerUtility.infoTest("The user clicks on Alerts");
         driver.navigate().to("https://demo.automationtesting.in/Alerts.html"); //navigheaza pana acolo si nu asteapta asa de mult ca get(), sa nu mai vedem reclamele
+        elementMethods.waitForce(3500);
         LoggerUtility.infoTest("The user  navigates to alert");
     }
 
@@ -48,6 +49,7 @@ public class RegisterPage extends BasePage {
         framesElement.click();
         LoggerUtility.infoTest("The user clicks on Frames");
         driver.navigate().to("https://demo.automationtesting.in/Frames.html");
+        elementMethods.waitForce(3500);
         LoggerUtility.infoTest("The user navigates to Frames");
     }
 
@@ -57,6 +59,7 @@ public class RegisterPage extends BasePage {
         windowsElement.click();
         LoggerUtility.infoTest("The user clicks on Windows");
         driver.navigate().to("https://demo.automationtesting.in/Windows.html");
+        elementMethods.waitForce(3500);
         LoggerUtility.infoTest("The user navigates to Windows");
     }
 
@@ -99,14 +102,14 @@ public class RegisterPage extends BasePage {
         elementMethods.fillElement(lastNameElement,registerObject.getLastName());
         elementMethods.clickElement(radioButtonElement);
 
-        for (int index = 0; index < checkBoxes.size(); index++) {
-            //checkBoxes.get(index).click();//pe fiecare faci click
-            if(registerObject.getCheckBoxesValues().contains(checkBoxes.get(index).getText())){
-                checkBoxes.get(index).click();
-            }
-        }
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+//        for (int index = 0; index < checkBoxes.size(); index++) {
+//            //checkBoxes.get(index).click();//pe fiecare faci click
+//            if(registerObject.getCheckBoxesValues().contains(checkBoxes.get(index).getText())){
+//                checkBoxes.get(index).click();
+//            }
+//        }
+//        JavascriptExecutor js = (JavascriptExecutor) driver;
+//        js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 
         elementMethods.fillElement(uploadElement,registerObject.getImageUpload());
         elementMethods.selectByText(countryElement, registerObject.getCountryValue());
@@ -117,13 +120,13 @@ public class RegisterPage extends BasePage {
         elementMethods.fillElement(passwordElement,registerObject.getPasswordRegister());
         elementMethods.fillElement(confirmPassword,registerObject.getConfirmPasswordRegister());
 
-        languagesElement.click();
-        for (int index = 0; index < languageOptions.size(); index++) { //faci o parcurgere de la primul element pana la ultimul
-
-            if (registerObject.getLanguageValues().contains(languageOptions.get(index).getText())) {
-                languageOptions.get(index).click();
-            }
-        }
+//        languagesElement.click();
+//        for (int index = 0; index < languageOptions.size(); index++) { //faci o parcurgere de la primul element pana la ultimul
+//
+//            if (registerObject.getLanguageValues().contains(languageOptions.get(index).getText())) {
+//                languageOptions.get(index).click();
+//            }
+//        }
 
     }
     public void clickConsent(){

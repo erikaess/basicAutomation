@@ -67,6 +67,9 @@
                         <suiteXmlFiles>
                             <suiteXmlFile>testng.xml</suiteXmlFile>
                         </suiteXmlFiles>
+                        <systemPropertyVariables>
+                            <ci_cd>false</ci_cd>
+                        </systemPropertyVariables>
                     </configuration>
                 </plugin>
             </plugins>
