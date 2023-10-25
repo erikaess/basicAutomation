@@ -4,10 +4,7 @@ import HelpMethods.ElementMethods;
 import Logger.LoggerUtility;
 import ObjectData.LoginObject;
 import ObjectData.RegisterObject;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -130,7 +127,11 @@ public class RegisterPage extends BasePage {
 
     }
     public void clickConsent(){
-        elementMethods.clickElement(consentElement);
+        try {
+            consentElement.click();
+        }
+        catch (NoSuchElementException ignored){
+        }
         LoggerUtility.infoTest("User clicks on click consent");
     }
 }
