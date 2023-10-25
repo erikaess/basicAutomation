@@ -108,7 +108,7 @@ public class RegisterPage extends BasePage {
 //        JavascriptExecutor js = (JavascriptExecutor) driver;
 //        js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 
-        elementMethods.fillElement(uploadElement,registerObject.getImageUpload());
+        //elementMethods.fillElement(uploadElement,registerObject.getImageUpload());
         elementMethods.selectByText(countryElement, registerObject.getCountryValue());
         elementMethods.selectByText(skillsElement, registerObject.getSkillValue());
         elementMethods.selectByValue(yearElement, registerObject.getYearValue());
